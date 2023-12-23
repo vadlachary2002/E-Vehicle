@@ -1,5 +1,4 @@
 import React from "react";
-import Loc from '../../assets/loc.avif';
 import './Home.scss';
 
 
