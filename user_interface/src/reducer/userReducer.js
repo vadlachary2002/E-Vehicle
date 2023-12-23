@@ -16,14 +16,14 @@ export const reducer = (state, action) => {
     localStorage.setItem('state',JSON.stringify(newState));
     return newState;
   case 'ADMIN':
-    var newState={
+    newState={
       ...state,
       isAdmin: action.payload
     }
     localStorage.setItem('state',JSON.stringify(newState));
     return newState;
   case 'EMAIL':
-    var newState = {
+    newState = {
       ...state,
       email: action.payload
     }
