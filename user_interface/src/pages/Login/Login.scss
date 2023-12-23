@@ -1,0 +1,89 @@
+.login{
+  padding: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .content{
+    h1{
+      font-size: 34px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      -webkit-text-fill-color:transparent;
+      background: #1d1919;
+      background-color: #CA4246;
+      background: conic-gradient(
+        #ca4246 33.666%,
+        #e16541 33.6%,
+        #e16541 40.33%,
+        #f18f43 43.33%,
+        #f18f43 50%,
+        #8b9862 50%,
+        #8b9862 66.66%,
+        #476098 66.66%,
+        #476098 83.33%,
+        #a7489b 83.33%,
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+  .minibox{
+    display: flex;
+    padding: 20px;
+    height: max-content;
+    background-color: #eee;
+    flex-direction: column;
+    .back{
+      display: none;
+    } 
+    h2{
+      font-size: 34px;
+      padding: 5px;
+      color:#3E7898;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    input[type="text"],input[type="password"]{
+      margin: 5px;
+      outline: none;
+      color:#476098;;
+      padding: 8px 15px;
+      border-radius: 4px;
+      background-color: #fefefe;
+      box-shadow: #222 0px 0px 2px 0px, #fefefe 0px  2px 5px 0px;
+      border-bottom: 1px solid #476098;
+    }
+    input[type="submit"]{
+      outline: none;
+      margin:10px 5px;
+      color:#fefefe;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      border-radius: 4px;
+      background-color: #476098;
+      border: none;
+      box-shadow: #222 0px 2px 4px 0px, rgb(168, 168, 212) 0px  2px 5px 0px;
+    }
+    input[type="submit"]:hover{
+      background-color: #1e4599;
+    }
+    input{
+      outline: none;
+      border: none;
+      font-size: 18px;
+    }
+    .links{
+      margin:5px;
+      padding: 5px 0;
+      display: flex;
+      gap: .5rem;
+      flex-direction: column;
+      text-align: right;
+      a{
+        color:#476098;
+        text-decoration: underline;
+      }
+    }
+  }
+}

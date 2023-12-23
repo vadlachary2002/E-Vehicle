@@ -1,0 +1,183 @@
+.register{
+  padding: 20px 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .content{
+    h1{
+      font-size: 34px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      -webkit-text-fill-color:transparent;
+      background: #1d1919;
+      background-color: #CA4246;
+      background: conic-gradient(
+        #ca4246 33.666%,
+        #e16541 33.6%,
+        #e16541 40.33%,
+        #f18f43 43.33%,
+        #f18f43 50%,
+        #8b9862 50%,
+        #8b9862 66.66%,
+        #476098 66.66%,
+        #476098 83.33%,
+        #a7489b 83.33%,
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    h4{
+      color: #476098;
+    }
+  }
+  .registerBox{
+    border-radius: 4px;
+    width: max-content;
+    background-color: #eee;
+    .top{
+      .progressBar{
+        padding: 4px;
+        width: 60%;
+        background-color: #3E7898;
+      }
+      h1{
+        font-size: 28px;
+        font-weight: bold;
+        color: #3E7898;
+        padding: 20px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    }
+    .middle{
+      padding: 10px;
+      display: flex;
+      gap:1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      .box{
+        padding: 10px;
+        flex: 1 1 400px;
+      }
+      .left{
+        display: flex;
+        flex-direction: column;
+        .inputBox{
+          display: flex;
+          padding: 5px;
+          align-items: center;
+          gap: .5rem;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          label{
+            width: max-content;
+            color: #3E7898;
+            font-weight: 500;
+            min-width: 100px;
+            text-align: left;
+          }
+          input,select{
+            background-color: #c8dce0;
+            border: none;
+            padding: 8px 10px;
+            width: 250px;
+            outline: none;
+            color: #1c5675;
+            border-radius: 2px;
+            border-bottom: 1px solid #299bd8;
+          }
+          select{
+            width: 270px;
+          }
+        }
+      }
+      .right{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        max-width: 250px;
+        .preview{
+          width: 180px;
+          height: max-content;
+          min-height: 180px;
+          padding: 5px;
+          border-radius: 2px;
+          background-color: #c8dce0;
+          margin-bottom: 15px;
+          img{
+            width: 180px;
+            max-height: 200px;
+          }
+        }
+
+        label{
+          cursor: pointer;
+          text-align: center;
+          }
+        input,label{
+          background-color: #c8dce0;
+          margin:5px;
+          border: none;
+          padding: 4px;
+          width: 180px;
+          outline: none;
+          color: #1c5675;
+          border-radius: 2px;
+          border-bottom: 1px solid #299bd8;
+        }
+        label:hover{
+          background-color: #275d7a;
+          color:#efefef;
+
+        }
+        .status{
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          span{
+            text-align: left;
+          }
+          .success{
+            color:green;
+          }
+          .error{
+            color:red;
+          }
+        }
+      }
+    }
+    .bottom{
+      padding: 10px;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      input{
+        outline: none;
+        font-weight: 600;
+        padding: 10px 18px;
+        border-radius: 3px;
+        cursor: pointer;
+        min-width: 180px;
+        border: none;
+        color: #fff;
+        
+      }
+      input[type="button"]{
+        color:#fff;
+        background-color:rgb(78, 108, 126);
+      }
+      input[type="submit"]{
+        color:#efefef;
+        background-color:#476098;
+      }
+      input[type="button"]:hover{
+        color:#efefef;
+        background-color:#7a98a8;
+      }
+      input[type="submit"]:hover{
+        color:#fff;
+        background-color:#2a53c5;;
+      }
+    }
+  }
+}

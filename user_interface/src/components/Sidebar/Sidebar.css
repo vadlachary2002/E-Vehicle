@@ -1,0 +1,90 @@
+
+.sidebar{
+  background: rgb(39, 39, 122);
+  height: 95vh;
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  transition: .2s ease-in-out;
+  box-shadow: #efefef 0px 5px 15px 0px, #555 0px  1px 5px 0px;
+  border-radius: 4px;
+  position: sticky;
+  top:10px;
+}
+
+.sidebar .head{
+  padding: 10px 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  height: 80px;
+}
+.sidebar .head img{
+  widows: 40px;
+  height: 40px;
+  margin: auto;
+
+}
+.sidebar .head span{
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.sidebarMaximize{
+  width: 250px;
+}
+.sidebarMinimize{
+  width: 50px;
+  overflow: hidden;
+}
+
+.sidebar .middle{
+  padding: 10px;
+  display: flex;
+  transition: .2s ease-in;
+}
+.sidebar .middle .list, ul{
+  list-style: none;
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  padding: 0;
+}
+.sidebar .middle ul li, ul li{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.sidebar .middle ul li i,ul li i{
+  width: max-content;
+  margin-right: 15px;
+}
+.sidebar .middle ul li:hover, ul li:hover{
+  background: rgb(90, 90, 185);
+}
+.sidebar .middle ul li a, ul li a,i{
+  text-decoration: none;
+  color: #aefaef;
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  text-align: left;
+}
+.sidebar .middle ul li a:hover, ul li a:hover,ul li:hover i{
+  color: #fefefe;
+}
+.sidebar .down{
+  padding: 10px;
+  display: flex;
+  flex:10%;
+  align-items: flex-end;
+}

@@ -1,0 +1,109 @@
+.homepage{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .content{
+    padding: 10px;
+    h1{
+      font-size: 38px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      -webkit-text-fill-color:transparent;
+      background: #1d1919;
+      background-color: #CA4246;
+      background: conic-gradient(
+        #ca4246 33.666%,
+        #e16541 33.6%,
+        #e16541 40.33%,
+        #f18f43 43.33%,
+        #f18f43 50%,
+        #8b9862 50%,
+        #8b9862 66.66%,
+        #476098 66.66%,
+        #476098 83.33%,
+        #a7489b 83.33%,
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    h4{
+      color:#476098;
+    }
+  }
+  .contentsearch{
+    padding: 30px;
+    .search{
+      padding: 20px;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        b{
+          color: #476098;
+          font-size: 24px;
+        }
+        small{
+          color: #476098;
+        }
+      }
+      button{
+        padding: 10px 15px;
+        font-size: 18px;
+        outline: none;
+        align-items: center;
+        border: none;
+        display: flex;
+        gap: 1em  ;
+        color: #efeefe;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: rgb(21, 52, 155);
+      }
+      button:hover{
+        background-color: rgb(39, 39, 122);
+      }
+    }
+    .status{
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: #eee;
+      gap: 1rem;
+      label{
+        font-size: 24px;
+        font-family:'Times New Roman', Times, serif;
+        color: #476098;
+      }
+      input{
+        outline: none;
+        border: none;
+        font-size: 20px;
+        padding: 8px 10px;
+        border-radius: 4px;
+        color: #333;
+        box-sizing: border-box;
+        box-shadow: #efefef 0px 5px 15px 0px, #555 0px  1px 5px 0px;
+      }
+      button{
+        padding: 10px 15px;
+        font-size: 18px;
+        outline: none;
+        align-items: center;
+        border: none;
+        color: #efeefe;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: rgb(21, 52, 155);
+        text-align: center;
+      }
+      button:hover{
+        background-color: rgb(39, 39, 122);
+      }
+    }
+  }
+}
