@@ -1,8 +1,13 @@
 import React from "react";
 import './Home.scss';
+import { useNavigate } from "react-router-dom";
 
 
 const Home =  ()=>{
+  const navigate =  useNavigate();
+  const redirect = (path)=>{
+    navigate(path);
+  }
   return (
     <div className="homepage">
       <div className="content">
@@ -12,7 +17,7 @@ const Home =  ()=>{
       <div className="contentsearch">
         <div className="search">
           <span><b>43%</b><small>Your Charging</small></span>
-          <button> Search<i className="fa-solid fa-search"/></button>
+          <button onClick={()=>redirect('/search')}> Search<i className="fa-solid fa-search"/></button>
         </div>
         <div className="status">
           <label htmlFor="">Enter Your Vehicle Charging</label>

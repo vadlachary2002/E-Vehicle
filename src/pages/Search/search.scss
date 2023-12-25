@@ -1,0 +1,185 @@
+.searchpage{
+  padding: 30px;
+  flex:80%;
+  color: #3e568f;
+
+  .mainhead{
+    padding: 10px;
+    background-color: #eee;
+    font-weight: bold;
+    color: #3e568f ;
+    box-shadow: #222 0px 1px 4px 0px, rgb(168, 168, 212) 0px  2px 5px 0px;
+  }
+  .middle{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    span{
+      padding: 6px 15px;
+      background-color: #3e568f;
+      color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  .content{
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .each{
+      padding: 10px;
+      background-color: #eee;
+      display: flex;
+      flex-direction: column;
+      min-width: 270px;
+      border-radius: 4px;
+      color: #476098 ;
+      box-shadow: #222 0px 2px 4px 0px, rgb(168, 168, 212) 0px  2px 5px 0px;
+      box-sizing: border-box;
+      cursor: pointer;
+      span{
+        padding: 5px;
+      }
+      .row{
+        display: flex;
+
+        justify-content: space-between;
+      }
+    }
+    .each:hover{
+      background-color: #3e568f;
+      color:#fefefe
+    }
+    .slots{
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: #222 0px 1px 4px 0px, rgb(168, 168, 212) 0px  2px 5px 0px;
+
+      .slot{
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        .head{
+          display: flex;
+          justify-content: space-between;
+          height: max-content;
+          flex-wrap: wrap;
+          .title{
+            font-size: 18px;
+            padding: 0 10px;
+            font-weight: bold;
+            color: #476098;
+          }
+          div{
+            display: flex;
+            gap: 1rem;
+            span{
+              padding: 10px 0;
+              white-space: nowrap;
+            }
+            .avail{
+              color:#3e568f;
+              border-bottom: 1px solid #3e568f;
+            }
+            .booked{
+              color:red;
+              border-bottom: 1px solid red;
+            }
+            .postTimeout{
+              color:rgb(197, 91, 52);
+              border-bottom: 1px solid rgb(197, 91, 52);;
+            }
+          }
+        }
+        .timings{
+          padding: 30px 0;
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: 1 1 120px;
+          span{
+            flex: 1 1 120px;
+            padding: 10px;
+            white-space:nowrap;
+            font-weight: 500;
+            cursor: pointer;
+            border:1px solid #eee;
+          }
+          span:hover{
+            border:1px solid #476098
+          }
+          .booked{
+            color:red;
+            cursor:no-drop;
+          }
+          .avail{
+            color:#476098;
+          }
+          .postTimeout{
+            color: rgb(197, 91, 52);
+          }
+        }
+      }
+    }
+    .box{
+      padding: 10px;
+      background-color: #efefef;
+      .up{
+        padding: 6px 15px;
+        font-size: 24px;
+        font-weight: bold;
+
+      }
+      .mid{
+        padding: 6px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        .left{
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          .row{
+            padding: 4px;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            span{
+              font-weight: 500;
+            }
+          }
+        }
+        .right{
+          text-align: right;
+          padding: 5px;
+        }
+      }
+      .down{
+        display: flex;
+        padding: 10px;
+        gap: 1rem;
+        justify-content: flex-end;
+        input{
+          outline: none;
+          border: none;
+          font-size: 15px;
+          padding: 8px 16px;
+          background-color: #476098;
+          color: #efefef;
+          min-width: 120px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        input[type="button"]{
+          background-color: #888fa1;
+        }
+        input:hover{
+          background-color: #3e568f;
+        }
+
+      }
+    }
+  }
+}
