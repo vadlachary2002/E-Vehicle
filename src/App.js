@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
-import { Home, Login, Profile, Register, Search } from './pages';
+import { HistoryOfBookings, Home, Login, Profile, Register, Search } from './pages';
 import Sidebar from './components/Sidebar/Sidebar';
 
 const App  = ()=>{
@@ -16,6 +16,7 @@ const App  = ()=>{
           <Route path='/search' element={<Search />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/history' element={<HistoryOfBookings />} />
         </Routes>
       </Router>
     </div>

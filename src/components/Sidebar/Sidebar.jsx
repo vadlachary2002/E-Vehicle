@@ -21,7 +21,7 @@ const Sidebar = ()=>{
         <li>  <a href="/"><i className="fa-solid fa-house" />Home</a></li>
         <li> <a href="/search"><i className="fa-solid fa-search"/>Search</a></li>
         <li> <a href="/profile"><i className="fa-solid fa-user"/> Profile</a></li>
-        <li> <a href="/"><i className="fa-solid fa-phone"/>Contact</a></li>
+        <li> <a href="/history"><i className="fa-solid fa-history"/>Bookings</a></li>
       </ul>
     </div>
     <div className="down">
