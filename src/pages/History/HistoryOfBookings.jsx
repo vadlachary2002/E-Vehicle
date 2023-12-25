@@ -15,7 +15,8 @@ const HistoryOfBookings = ()=>{
     if(error){
       setError(data.message);
       setTimeout(() => {
-        setError('')
+        setError('');
+        navigate('/login');
       }, 2000);
       return;
     }
