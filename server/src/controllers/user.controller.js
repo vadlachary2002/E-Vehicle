@@ -16,9 +16,9 @@ const login = catchAsync (async(req,res)=>{
   }
   const { email, token } =  info;
   res
-    .cookie('email',email,{httpOnly:true})
-    .cookie('jwtoken',token,{httpOnly:false});
-  res.status(code).json(info);
+    .cookie('email',email,{httpOnly:false})
+    .cookie('jwtoken',token,{httpOnly:false})
+    .status(code).json(info);
 })
 
 const logout = catchAsync(async(req,res)=>{

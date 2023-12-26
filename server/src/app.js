@@ -13,7 +13,7 @@ const config = require('./config/config');
 // parse urlencoded request body
 app.use(express.json());
 const corsOptions ={
-  origin:[config.frontendUrl,], 
+  origin:[config.frontendUrl], 
   credentials:true,            
   optionSuccessStatus:200,
   allowedHeaders: ['Content-Type','Authorization','x-csrf-token'],

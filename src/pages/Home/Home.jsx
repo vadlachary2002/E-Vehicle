@@ -18,6 +18,7 @@ const Home =  ()=>{
         <div className="search">
           <span><b>43%</b><small>Your Charging</small></span>
           <button onClick={()=>redirect('/search')}> Search<i className="fa-solid fa-search"/></button>
+          <button onClick={()=>redirect('/login')}> Login</button>
         </div>
         <div className="status">
           <label htmlFor="">Enter Your Vehicle Charging</label>
@@ -25,6 +26,7 @@ const Home =  ()=>{
           <button>Update</button>
         </div>
       </div>
+
     </div>
   )
 }

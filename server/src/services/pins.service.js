@@ -21,10 +21,11 @@ const createPin = async(pinBody)=>{
   }
 }
 
-const bookSlot =  async(slotId,email,bookBody)=>{
+const bookSlot =  async(email,bookBody)=>{
     const { city, subcity, type, slotb} = bookBody;
-    const slot =  await Pins.findOne({'_id':slotId});
-    console.log(slot);
+    console.log("email",email)
+    const slot =  await Pins.findOne({city});
+    console.log("lot",slot);
     let currentHour =  moment(new Date()).hour();
     let booked=null;
     for(var i=0;i<slot.subcities.length;i=i+1){
@@ -34,9 +35,9 @@ const bookSlot =  async(slotId,email,bookBody)=>{
           if(slot.subcities[i][type].slots[j].slot==slotb){
             console.log("cameeeee",slot.subcities[i][type].slots[j].isBooked);
             if(slot.subcities[i][type].slots[j].isBooked==true){
-              return { code:401,info:{status:"failed to book ,already booked"}}
+              return { code:401,info:{message:"failed to book ,already booked"}}
             }else if(currentHour>slot.subcities[i][type].slots[j].timeout-1){
-              return { code:401,info:{status:"failed to book ,unable to book outdated slot"}}
+              return { code:401,info:{message:"failed to book ,unable to book outdated slot"}}
             }else{
               booked=slot.subcities[i][type].slots[j];
               slot.subcities[i][type].slots[j].isBooked=true;
@@ -50,7 +51,7 @@ const bookSlot =  async(slotId,email,bookBody)=>{
     if(!booked){
       return {
         code:401,
-        info:{status:"Internal Server error"}
+        info:{message:"Internal Server error"}
       }
     }
     console.log(booked);
@@ -58,7 +59,7 @@ const bookSlot =  async(slotId,email,bookBody)=>{
     const booking =  await Bookings.create(bookingBody);
     return {
       code:201,
-      info:{status:"Slot Booked",slotId,booking}
+      info:{message:"Slot Booked",booking}
     }
 }
 module.exports = { available, createPin, bookSlot}

@@ -15,7 +15,7 @@ router
   .get(pinsController.resetBookings);
 
 router
-  .route('/book/:slotId')
-  .get(update,pinsController.bookSlot)
+  .route('/book')
+  .post(update,pinsController.bookSlot)
 
 module.exports = router ;

@@ -3,7 +3,7 @@ import Logo from '../../assets/logo.png';
 import './Sidebar.css';
 
 const Sidebar = ()=>{
-  const [largeView, setLargeView ] =  useState(false);
+  const [largeView, setLargeView ] =  useState(true);
   const toggle = ()=> setLargeView(!largeView);
   return (
     <div className={largeView?'sidebar sidebarMaximize':'sidebar sidebarMinimize'}>

@@ -34,10 +34,12 @@ const createPin =catchAsync(async(req,res)=>{
 })
 
 const bookSlot = catchAsync(async(req,res)=>{
-  const {slotId} =  req.params;
-  console.log(slotId);
   const { email } =  req.cookies;
-  const { code, info } =  await pinsService.bookSlot(slotId,email,req.query);
+  console.log(email);
+  console.log(req.body);
+  const bb = req.body;
+  bb.slotb=bb.slot;
+  const { code, info } =  await pinsService.bookSlot(email,req.body);
   res.status(code).json(info);
 })
 module.exports = {resetBookings, available, createPin, bookSlot}

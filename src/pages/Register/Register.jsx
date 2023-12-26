@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './Register.scss';
 import { useNavigate } from "react-router-dom";
+import { register } from "../../services/User";
 
 const defaultUser = {
   firstname:'',
@@ -12,6 +13,8 @@ const defaultUser = {
 }
 const Register = ()=>{
   const [userDetails, setUserDetails] = useState(defaultUser);
+  const [ error, setError] = useState('');
+  const [ success, setSuccess] = useState('');
   const navigate = useNavigate();
   const updateUserDetails = (e) => {
     setUserDetails((prevUser) => {
@@ -23,13 +26,20 @@ const Register = ()=>{
   };
   const onSubmit = async (e) => {
     e.preventDefault();
-    // const { error, data, code } = await register(userDetails, file);
-    // if (error) {
-    //   console.log('Error');
-    //   return;
-    // }
-    // console.log(data, code);
-    console.log(userDetails);
+    const {error, data} = await register(userDetails);
+    if(error){
+      setError(data.message);
+      setTimeout(() => {
+        setError('')
+      }, 2000);
+      return;
+    }
+    setSuccess('User registered succesfully');
+    setTimeout(() => {
+      setSuccess('');
+      navigate('/login')
+    }, 2000);
+    return ;
   };
   const goBack = () => {
     navigate(-1);
@@ -39,6 +49,8 @@ const Register = ()=>{
       <div className="content">
         <h1>No Need to Worry!!!</h1>
         <h4>Your details will be safe.</h4>
+        <div className="error">{error}</div>
+        <div className="success">{success}</div>
       </div>
       <form className="registerBox" onSubmit={onSubmit}>
         <div className="top">
