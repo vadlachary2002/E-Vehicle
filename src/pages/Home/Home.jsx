@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import './Home.scss';
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../Auth"
 
 
 const Home =  ()=>{
@@ -8,10 +9,11 @@ const Home =  ()=>{
   const redirect = (path)=>{
     navigate(path);
   }
+  const { state, loggedIn} =  useContext(UserContext);
   return (
     <div className="homepage">
       <div className="content">
-        <h1>Well-Come Chary</h1>
+        <h1>Well-Come {state.email}</h1>
         <h4>Search E-Vehicle Charge Pin NearBy...</h4>
       </div>
       <div className="contentsearch">
