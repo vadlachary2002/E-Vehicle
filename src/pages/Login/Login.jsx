@@ -48,7 +48,7 @@ const Login = ()=>{
     <div className="login">
       <div className="content">
         <h1>Login to Explore...</h1>
-        <h4>Don't have an account <a href="/register">Register?</a> </h4>
+        <h4>Don't have an account <a href="#/register">Register?</a> </h4>
         <div className="error">{error}</div>
         <div className="success">{success}</div>
       </div>
@@ -70,8 +70,8 @@ const Login = ()=>{
         />
         <input type="submit" value="Login" />
         <div className="links">
-          <a href="/forgotpass">Forgot Password?</a>
-          <a href="/register">
+          <a href="#/forgotpass">Forgot Password?</a>
+          <a href="#/register">
             <b>Register</b>
           </a>
         </div>
