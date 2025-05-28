@@ -32,7 +32,7 @@ const Login = ()=>{
     loggedIn(data);
     setTimeout(() => {
       setSuccess('');
-      navigate('/profile')
+      navigate('/search')
     }, 2000);
     return ;
 
@@ -40,7 +40,7 @@ const Login = ()=>{
   }
   useEffect(()=>{
     if(state && state.user){
-      navigate('/profile');
+      navigate('/search');
       return;
     }
   },[state]);
