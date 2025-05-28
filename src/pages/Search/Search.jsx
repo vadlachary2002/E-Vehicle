@@ -20,7 +20,7 @@ const Search =  ()=>{
     time:'',
     cost:null,
     timeout:null,
-    email:''
+    email:'chary@gmail.com'
   })
   const bookSlot = async (slot,type,cost)=>{
     setBooking((prevBooking)=>{
